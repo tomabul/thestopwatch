@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.alephnull.thestopwatch.MainScreenActivity">
+
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txtMinutes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:fontFamily="monospace"
+        android:textStyle="normal|bold"
+        android:textSize="100sp" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLimiter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:fontFamily="monospace"
+        android:textSize="90sp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtMinutes"
+        android:layout_toEndOf="@+id/txtMinutes"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSeconds"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:fontFamily="monospace"
+        android:textStyle="normal|bold"
+        android:textSize="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtLimiter"
+        android:layout_toEndOf="@+id/txtLimiter" />
+
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMiliseconds"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/txtSeconds"
+        android:layout_alignBottom="@+id/txtSeconds"
+        android:layout_toRightOf="@+id/txtSeconds"
+        android:layout_toEndOf="@+id/txtSeconds" />
+
+    <Button
+        android:text="RESTART"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRestart"
+        android:textStyle="normal|bold"
+        android:paddingBottom="60dp"
+        android:paddingTop="60dp"
+        android:textSize="30sp"
+        android:background="@android:color/holo_green_light"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:layout_below="@+id/txtMinutes"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="RESET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReset"
+        android:textStyle="normal|bold"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:textSize="30sp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/btnRestart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+
+    <Button
+        android:text="PAUSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartStop"
+        android:textStyle="normal|bold"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:textSize="30sp"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_alignBaseline="@+id/btnReset"
+        android:layout_alignBottom="@+id/btnReset"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
